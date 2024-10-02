@@ -1,0 +1,131 @@
+<head> 
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pawel's Project # <%= title %></title>
+    <style>
+
+        /* Nav style */
+        body{
+            max-width: 1200px;
+            margin: 20px auto;
+            padding: 0 20px;
+        }
+        nav{
+            display: flex;
+            justify-content: space-between;
+            margin-bottom: 60px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+            text-transform: uppercase;
+        }
+        nav ul{
+            display: flex;
+            justify-content: space-between;
+            align-items: flex-end;
+        }
+        nav li{
+            list-style-type: none;
+            margin-left: 20px;
+        }
+
+        /* index style */
+        .content{
+            margin-left: 20px;
+        }
+
+        .reports a{
+            display: block;
+            margin: 40px 0;
+            padding-left: 30px;
+            border-left: 6px solid greenyellow;
+        }
+
+        .reports a:hover h3{
+            color:greenyellow;
+        }
+        
+        /*Details/Delete style */
+        .details{
+            position: relative;
+        }
+        .delete{
+            position: absolute;
+            top: 0;
+            right: 0;
+            border-radius: 50%;
+            padding: 8px;
+        }
+        .delete:hover{
+            cursor: pointer;
+            box-shadow: 1px 2px 3px rgba(0, 0, 0, 0.2);
+
+        }
+
+        /*Create style */
+        .create form{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .create input,
+        
+        .create label{
+            display: block;
+            margin-top: 24px;
+        }
+    
+        .create button{
+            margin-top: 20px;
+            background: blue;
+            color: white;
+            padding: 6px;
+            border: 0;
+            font-size: 1.2em;
+            cursor: pointer;
+        }
+        .create form{
+            max-width: 400px;
+            margin: 0 auto;
+        }
+        .create input,
+
+        .update-content textarea{
+            display: block;
+            width: 100%;
+            margin: 10px 0;
+            padding: 8px;
+        }
+        .update-content label{
+            display: block;
+            margin-top: 24px;
+        }
+
+        /* Update style*/
+        .update-button{
+            display: block;
+            width: 15%;
+            padding: 12px;
+            border: none;
+            outline: none;
+            cursor: pointer;
+            background-color:darkgray;
+            color: white;
+            text-align: left;
+            transition: background 0.2s;
+        }
+        .update-button::after{
+            content: '\25be';
+            float: right;
+            transform: scale(1.5);
+        }
+        .update-button--active{ background: gray }
+        .update-button--active::after{content: '\25b4'}
+
+        .update-content{
+            overflow: hidden;
+            max-height: 0;
+            transform: max-height 0.2s;
+            padding: 0 15px;
+            background: #eeeeee;
+        }
+    </style>
+</head>

@@ -1,0 +1,29 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+
+    <div class="create content">
+        <form action="/reports/create" method="POST">
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" required>
+            <label for="eduDur">Education usage duration:</label>
+            <input type="number" id="eduDur" name="eduDur" required>
+            <label for="shopDur">Shopping usage duration:</label>
+            <input type="number" id="shopDur" name="shopDur" required>
+            <label for="browseDur">Browsing usage duration:</label>
+            <input type="number" id="browseDur" name="browseDur" required>
+            <label for="socialDur">Social media usage duration:</label>
+            <input type="number" id="socialDur" name="socialDur" required>
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+            <button>Submit</button> 
+        </form> 
+
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>

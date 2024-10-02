@@ -1,0 +1,26 @@
+<html lang="en">
+    <%- include('./partials/head.ejs') %>
+<body>
+    <%- include('./partials/nav.ejs') %>
+
+    <div class="reports content">
+        <h2>All reports</h2>
+
+        <% if (reports.length > 0) { %>
+            <% reports.forEach(report => { %>
+                <a class="single" href="/reports/<%= report._id%>">
+                 <h2 class="name"><%= report.name %></h2>
+                 <p class="time"><%= report.date %></p>
+                </a>
+            <% }) %>
+        <% } else { %>
+            <p> There are no reports to display </p>
+        <% } %> 
+
+
+    </div>
+    <%- include('./partials/footer.ejs') %>
+
+</body>
+
+</html>
